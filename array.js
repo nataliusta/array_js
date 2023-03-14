@@ -21,10 +21,12 @@ function printAndGetHighScore (scores) {
     return highScore;
 }
 
+let highScore = printAndGetHighScore(scores);
 console.log("Bubbles tests: " + scores.length);
 console.log("Highest bubbles score: " + highScore);
 
 let bestSolutions = []; // empty array for new max results
+
 for (let i = 0; i < scores.length; i++) {
     if (scores[i] == highScore) { // in case current result = max result (highScore) add i to bestSolutions
         bestSolutions.push(i); // add new index to array
