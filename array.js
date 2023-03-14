@@ -5,17 +5,22 @@ let scores = [60, 50, 60, 58, 54, 54, // new array
               46, 31, 57, 52, 44, 18,
               41, 53, 55, 61, 51, 44];
 
-let highScore = 0; // max result with default value zero
-let output;
+function printAndGetHighScore (scores) {
 
-for (let i = 0; i < scores.length; i++) { // iteration array elements
+    let highScore = 0; // max result with default value zero
+    let output;
 
-    output = "Bubble solution " + i + " score: " + scores[i]; // output results
-    console.log(output);
-    if (scores[i] > highScore) { // if current result more than max result (highScore) it becomes a new highScore
-        highScore = scores[i];
+    for (let i = 0; i < scores.length; i++) { // iteration array elements
+
+        output = "Bubble solution " + i + " score: " + scores[i]; // output results
+        console.log(output);
+        if (scores[i] > highScore) { // if current result more than max result (highScore) it becomes a new highScore
+            highScore = scores[i];
+        }
     }
+    return highScore;
 }
+
 console.log("Bubbles tests: " + scores.length);
 console.log("Highest bubbles score: " + highScore);
 
