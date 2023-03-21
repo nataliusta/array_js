@@ -5,6 +5,13 @@ let scores = [60, 50, 60, 58, 54, 54, // new array
               46, 31, 57, 52, 44, 18,
               41, 53, 55, 61, 51, 44];
 
+let costs = [25, 27, 25, 25, 25, 25, // array of costs
+             33, 31, 25, 29, 27, 22,
+             31, 25, 25, 33, 21, 25,
+             25, 25, 28, 25, 24, 22,
+             20, 25, 30, 25, 24, 25,
+             25, 25, 27, 25, 26, 29];
+
 function printAndGetHighScore (scores) {
 
     let highScore = 0; // max result with default value zero
@@ -39,3 +46,5 @@ function getBestResults(scores, highScore) {
 
 let bestSolutions = getBestResults(scores, highScore);
 console.log("Solutions with the highest score: " + bestSolutions);
+
+function getMostCostEffectiveSolution (score, costs, highScore)
