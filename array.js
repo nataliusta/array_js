@@ -48,18 +48,18 @@ let bestSolutions = getBestResults(scores, highScore);
 console.log("Solutions with the highest score: " + bestSolutions);
 
 function getMostCostEffectiveSolution (scores, costs, highScore) {
-    let cost = 100;
-    let index;
+    let cost = 100; // variable for min cost
+    let index; // variable for min costs[i]
 
     for (let i = 0; i < scores.length; i++) {
-        if (scores[i] == highScore) {
-            if (cost > costs[i]) {
+        if (scores[i] == highScore) { // in case current index is max
+            if (cost > costs[i]) { // in case current costs more than saved costs
                 index = i;
                 cost = costs[i];
             }
         }
     }
-    return index;
+    return index; // here is min costs[i]
 }
 
 let mostCostEffective = getMostCostEffectiveSolution(scores, costs, highScore);
