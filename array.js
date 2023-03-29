@@ -38,7 +38,7 @@ function getBestResults(scores, highScore) {
 
     for (let i = 0; i < scores.length; i++) {
         if (scores[i] == highScore) { // in case current result = max result (highScore) add i to bestSolutions
-            bestSolutions.push(i); // add new index to array
+            bestSolutions.push(); // add new index to array
         }
     }
     return bestSolutions;
